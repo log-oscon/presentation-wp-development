@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>WordPress Development</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section data-bespoke-backdrop="intro">
+        <h3>WordPress @ log</h3>
+        <h1>Development Workbench</h1>
+        <h3>April 2015</h3>
+      </section>
+      <section data-bespoke-backdrop="slide-start">
+        <h3>No time to lose.</h3>
+      </section>
+      <section data-bespoke-backdrop="intro">
+        <h1>Virtualized Environment</h1>
+      </section>
+      <section data-bespoke-hash="vagrant" data-bespoke-backdrop="tool-vagrant" class="tool">
+        <h2>Vagrant</h2>
+        <h3>vagrantup.com</h3>
+      </section>
+      <section>
+        <p class="bullet">Very little setup.</p>
+        <p class="bullet">Almost everything you need is prepackaged.</p>
+        <p class="bullet">Windows? OS X? Linux? It just works.</p>
+        <p class="bullet">Everyone uses the same VM configuration.</p>
+      </section>
+      <section data-bespoke-hash="vvv" data-bespoke-backdrop="tool-vagrant" class="tool">
+        <h2>VVV</h2>
+        <h3>github.com/Varying-Vagrant-Vagrants</h3>
+      </section>
+      <section>
+        <p class="bullet">Creates new local WordPress sites from configuration.</p>
+        <p class="bullet">Provides database and cache management tools.</p>
+        <p class="bullet">Provides debug and profiling tools.</p>
+      </section>
+      <section>
+        <p class="bullet">I provided you with a sample VVV setup.</p>
+        <pre class="bullet"><code class="language-javascript">$ cd ~/VVV
+$ vagrant up
+</code></pre>
+      </section>
+      <section data-bespoke-backdrop="slide-please-wait">
+        <h3>It takes a minute.</h3>
+      </section>
+      <section>
+        <p>VVV Dashboard</p>
+        <h3>http://vvv/</h3>
+      </section>
+      <section data-bespoke-backdrop="intro">
+        <h1>Scaffolding</h1>
+      </section>
+      <section data-bespoke-hash="starter-themes">
+        <h2>Starter Themes</h2>
+        <hr>
+        <p class="bullet"></p>
+        <p class="bullet">Genesis Framework</p>
+        <p class="bullet">Underscores (underscores.me)</p>
+        <p class="bullet">Sage (roots.io)</p>
+        <p class="bullet">B3 (beebeebee.be)</p>
+      </section>
+      <section>
+        <p>Find a Genesis-based starter theme in your VM:</p><br>
+        <pre>~/VVV/www/workshop.dev/wp-content/themes/genesis-starter</pre>
+      </section>
+      <section data-bespoke-hash="wppb" data-bespoke-backdrop="tool-wppb" class="tool">
+        <h2>Plugin Boilerplate</h2>
+        <h3>wppb.io</h3>
+      </section>
+      <section>
+        <p>Find a Boilerplate-based plugin in your VM:</p><br>
+        <pre>~/VVV/www/workshop.dev/wp-content/plugins/plugin-name</pre>
+      </section>
+      <section data-bespoke-hash="yeoman" data-bespoke-backdrop="tool-yeoman" class="tool">
+        <h2>Yeoman</h2>
+        <h3>yeoman.io</h3>
+      </section>
+      <section>
+        <h2>Yeoman</h2>
+        <hr><br>
+        <p>Try it now.</p><br>
+        <pre>$ yo wp-plugin-boilerplate</pre>
+      </section>
+      <section>
+        <p class="bullet">Avoid reinventing the wheel.</p><br>
+        <p class="bullet">&ldquo;A 1000-hour headstart.&rdquo;</p><br>
+        <p class="bullet">Provides structure and best practices.</p>
+      </section>
+      <section data-bespoke-backdrop="intro">
+        <h1>Dependency Management</h1>
+      </section>
+      <section data-bespoke-hash="composer" data-bespoke-backdrop="tool-composer" class="tool">
+        <h2>Composer</h2>
+        <h3>getcomposer.org</h3>
+      </section>
+      <section>
+        <h4>Need a PHP library?</h4>
+        <pre>$ composer require &lt;library&gt;</pre>
+      </section>
+      <section>
+        <h4>Need a WordPress plugin?</h4>
+        <pre>$ composer require wpackagist-plugin/&lt;plugin&gt;</pre>
+      </section>
+      <section data-bespoke-hash="npm" data-bespoke-backdrop="tool-npm" class="tool">
+        <h2>NPM</h2>
+        <h3>npmjs.org</h3>
+      </section>
+      <section>
+        <h4>Need a JavaScript module?</h4>
+        <pre>$ npm install &lt;module&gt;</pre>
+      </section>
+      <section>
+        <p class="bullet">Don’t repeat yourself.</p>
+        <p class="bullet">Don’t manage 3rd party code.</p>
+        <p class="bullet">Just declare required components and versions.</p>
+        <p class="bullet">Manages dependencies and conflicts.</p>
+      </section>
+      <section>
+        <h3>Wait, isn’t NPM a Node.js thing?</h3>
+        <h3>How do I use these modules?</h3>
+      </section>
+      <section data-bespoke-hash="browserify" data-bespoke-backdrop="tool-browserify" class="tool">
+        <h2>Browserify</h2>
+        <h3>browserify.org</h3>
+      </section>
+      <section>
+        <p>Browserify lets you use NPM modules in the browser.</p>
+      </section>
+      <section>
+        <h4>Step 1</h4>
+        <pre>$ npm install uniq</pre><br>
+        <h4>Step 2</h4>
+        <pre><code class="language-javascript">var unique = require('uniq'),
+    data   = [1, 2, 2, 3, 3, 3, 4];
+    
+unique(data); // =&gt; [1, 2, 3, 4]
+</code></pre>
+      </section>
+      <section data-bespoke-backdrop="slide-wake-up">
+        <p>Designers &mdash; this one is for you.</p>
+      </section>
+      <section data-bespoke-backdrop="intro">
+        <h1>Asset Building</h1>
+      </section>
+      <section data-bespoke-hash="sass" data-bespoke-backdrop="tool-sass" class="tool">
+        <h2>Sass</h2>
+        <h3>sass-lang.com</h3>
+      </section>
+      <section>
+        <p>Sass is a better way to write CSS.</p>
+      </section>
+      <section>
+        <h2>CSS</h2>
+        <pre><code class="language-css">.content h1,
+.content h2,
+.content h3,
+.content p {
+  color: black;
+}
+</code></pre>
+      </section>
+      <section>
+        <h2>Sass/SCSS</h2>
+        <pre><code class="language-css">$text-color: black;
+
+.content {
+  h1, h2, h3, p {
+    color: $text-color;
+  }
+}
+</code></pre>
+      </section>
+      <section>
+        <h2>Optimization</h2>
+        <hr>
+        <p class="bullet"></p>
+        <p class="bullet">Combines JS and CSS into single files.</p>
+        <p class="bullet">Automatically generates CSS for legacy browsers.</p>
+        <p class="bullet">Generates image sprites.</p>
+        <p class="bullet">Compresses sources and images.</p>
+      </section>
+      <section data-bespoke-backdrop="intro">
+        <h1>QA</h1>
+      </section>
+      <section data-bespoke-backdrop="slide-self-punch">
+        <p>Don’t be your own worst enemy.</p>
+      </section>
+      <section>
+        <p class="bullet">Maintenance is 80% of the cost of a large project.</p>
+        <p class="bullet">You should care that your code is easy to maintain.</p>
+      </section>
+      <section data-bespoke-backdrop="slide-tangled-cables">
+        <h2>Messy Code</h2>
+        <hr><br>
+        <p>Hard to read.</p><br>
+        <p>Hard to understand.</p><br>
+        <p>Hard to maintain.</p><br>
+        <p>Dangerous.</p>
+      </section>
+      <section data-bespoke-backdrop="slide-frustration">
+        <p>Messy code leads to developer frustration.</p>
+      </section>
+      <section data-bespoke-backdrop="slide-hide-mess">
+        <p>Messy code can hide serious defects.</p>
+      </section>
+      <section data-bespoke-backdrop="slide-waste">
+        <p>Messy code costs you real money.</p>
+      </section>
+      <section>
+        <h2>Linting</h2>
+        <hr>
+        <p class="bullet"></p>
+        <p class="bullet">Ensures coding standards.</p>
+        <p class="bullet">Detects common bugs.</p>
+        <p class="bullet">Encourages best practices.</p>
+      </section>
+      <section>
+        <h2>WordPress Coding Standards</h2>
+        <hr>
+        <h3>make.wordpress.org/core/handbook/coding-standards</h3>
+      </section>
+      <section>
+        <h2>In 6 months…</h2>
+        <hr>
+        <p class="bullet"></p>
+        <p class="bullet">Will you remember how the project works?</p>
+        <p class="bullet">Will the new intern know?</p>
+      </section>
+      <section data-bespoke-backdrop="slide-minor-fail">
+        <p>Less of this.</p>
+      </section>
+      <section data-bespoke-backdrop="slide-epic-fail">
+        <p><u>Definitely</u> less of this.</p>
+      </section>
+      <section data-bespoke-backdrop="slide-epic-win">
+        <p>More of this.</p>
+      </section>
+      <section>
+        <h2>Unit Testing</h2>
+        <hr>
+        <p class="bullet"></p>
+        <p class="bullet">Minimizes bugs.</p>
+        <p class="bullet">Prevents regressions.</p>
+        <p class="bullet">Encourages best practices.</p>
+      </section>
+      <section data-bespoke-backdrop="slide-thats-a-lot">
+        <h3>Okay, that’s a lot.</h3>
+      </section>
+      <section data-bespoke-backdrop="slide-overwhelmed">
+        <h3>Do I have to build and test everything by hand?</h3>
+      </section>
+      <section>
+        <p>NO</p>
+      </section>
+      <section data-bespoke-backdrop="intro">
+        <h1>Task Automation</h1>
+      </section>
+      <section data-bespoke-hash="gulp" data-bespoke-backdrop="tool-gulp" class="tool">
+        <h2>Gulp</h2>
+        <h3>gulpjs.com</h3>
+      </section>
+      <section>
+        <p>Leave this one thing running...</p>
+      </section>
+      <section>
+        <pre>$ gulp watch</pre>
+      </section>
+      <section>
+        <p>Gulp watches your files for changes.</p>
+      </section>
+      <section>
+        <p>Then builds, optimizes and tests everything as needed.</p>
+      </section>
+      <section>
+        <p>It will even reload the browser for you.</p>
+      </section>
+      <section>
+        <h2>By the way</h2>
+        <hr><br>
+        <p>Guess what’s behind the scenes of this presentation.</p>
+      </section>
+      <section data-bespoke-hash="browsersync" data-bespoke-backdrop="tool-browsersync" class="tool">
+        <h2>BrowserSync</h2>
+        <h3>browsersync.io</h3>
+      </section>
+      <section>
+        <p>Synchronizes changes and interactions<br>across <u>all devices</u> connected to your dev site.</p>
+      </section>
+      <section>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hnWhKooKrqY" frameborder="0" allowfullscreen></iframe>
+      </section>
+      <section data-bespoke-backdrop="intro">
+        <h1>Debug &amp; Profiling</h1>
+      </section>
+      <section data-bespoke-hash="chrome-devtools" data-bespoke-backdrop="tool-chrome-devtools" class="tool">
+        <h2>Chrome DevTools</h2>
+        <h3>google.com/chrome</h3>
+      </section>
+      <section data-bespoke-hash="xdebug" data-bespoke-backdrop="tool-xdebug" class="tool">
+        <h2>Xdebug</h2>
+        <h3>xdebug.org</h3>
+      </section>
+      <section>
+        <h2>Xdebug</h2>
+        <hr><br>
+        <p class="bullet">VVV comes with Xdebug out of the box.</p>
+        <p class="bullet">Let’s try it now.</p>
+      </section>
+      <section>
+        <h2>Turn Xdebug on</h2>
+        <hr><br>
+        <pre>$ vagrant ssh -c xdebug_on</pre>
+      </section>
+      <section>
+        <h2>Xdebug Profiler</h2>
+        <hr>
+        <p class="bullet"></p>
+        <p class="bullet">Append <code>?XDEBUG_PROFILE</code> to the site’s address.</p>
+        <p class="bullet">(e.g. <code>http://workshop.dev/?XDEBUG_PROFILE</code>)</p>
+        <p class="bullet">Now visit <code>http://vvv/webgrind/</code> to profile the request.</p>
+      </section>
+      <section data-bespoke-hash="debug-bar" data-bespoke-backdrop="tool-debug-bar" class="tool">
+        <h2>Debug Bar</h2>
+        <h3>wordpress.org/plugins/debug-bar</h3>
+      </section>
+      <section>
+        <h2>Debug Bar</h2>
+        <hr>
+        <p class="bullet"></p>
+        <p class="bullet">Installed as a WordPress plugin.</p>
+        <p class="bullet">Extendable.</p>
+      </section>
+      <section data-bespoke-hash="p3-profiler" data-bespoke-backdrop="tool-p3" class="tool">
+        <h2>Plugin Performance Profiler</h2>
+        <h3>wordpress.org/plugins/p3-profiler</h3>
+      </section>
+      <section data-bespoke-hash="pagespeed" data-bespoke-backdrop="tool-pagespeed" class="tool">
+        <h2>PageSpeed</h2>
+        <h3>developers.google.com/speed/pagespeed</h3>
+      </section>
+      <section data-bespoke-hash="yslow" data-bespoke-backdrop="tool-yslow" class="tool">
+        <h2>YSlow</h2>
+        <h3>yslow.org</h3>
+      </section>
+      <section data-bespoke-hash="ab" data-bespoke-backdrop="tool-ab" class="tool">
+        <h2>ApacheBench</h2>
+        <h3>httpd.apache.org</h3>
+      </section>
+      <section data-bespoke-backdrop="intro">
+        <h1>Version Control</h1>
+      </section>
+      <section data-bespoke-hash="git" data-bespoke-backdrop="tool-git" class="tool">
+        <h2>Git</h2>
+        <h3>git-scm.com</h3>
+      </section>
+      <section data-bespoke-hash="bitbucket" data-bespoke-backdrop="tool-bitbucket" class="tool">
+        <h2>Bitbucket</h2>
+        <h3>bitbucket.com</h3>
+      </section>
+      <section>
+        <h2>TODO: Git workflow</h2>
+      </section>
+      <section>
+        <h2>Code Reviews</h2>
+      </section>
+      <section>
+        <h2>Code Reviews</h2>
+        <hr>
+        <p class="bullet"></p>
+        <p class="bullet">Preserve architectural integrity.</p>
+        <p class="bullet">Prevent a wide variety of bugs.</p>
+        <p class="bullet">Enforce best practices.</p>
+        <p class="bullet">JUST DO IT.</p>
+      </section>
+      <section>
+        <h2>Code Reviews</h2>
+        <hr>
+        <p class="bullet"></p>
+        <p class="bullet">All code must be approved before it can go live.</p>
+        <p class="bullet">&ldquo;Pull Requests&rdquo; on Bitbucket.</p>
+        <p class="bullet">Code annotations on Bitbucket.</p>
+      </section>
+      <section>
+        <h2>TODO: Git + Code review workflow</h2>
+      </section>
+      <section data-bespoke-backdrop="intro">
+        <h1>Continuous Integration</h1>
+      </section>
+      <section data-bespoke-hash="codeship" data-bespoke-backdrop="tool-codeship" class="tool">
+        <h2>Codeship</h2>
+        <h3>codeship.com</h3>
+      </section>
+      <section>
+        <h2>TODO: Git + Codeship workflow</h2>
+      </section>
+      <section data-bespoke-hash="thank-you" data-bespoke-backdrop="thank-you">
+        <h2>Thank you</h2>
+        <hr>
+        <h3>luis.rodrigues@log.pt</h3>
+        <h3>@goblindegook</h3>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
