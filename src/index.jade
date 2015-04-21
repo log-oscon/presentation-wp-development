@@ -1,0 +1,422 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title WordPress Development
+
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  body
+
+    article
+
+      section(data-bespoke-backdrop='intro')
+        h3 WordPress @ log
+        h1 Development Workbench
+        h3 April 2015
+
+      section(data-bespoke-backdrop='slide-start')
+        h3 No time to lose.
+
+      section(data-bespoke-backdrop='intro')
+        h1 Virtualized Environment
+
+      section.tool(data-bespoke-hash='vagrant' data-bespoke-backdrop='tool-vagrant')
+        h2 Vagrant
+        h3 vagrantup.com
+
+      section
+        p.bullet Very little setup.
+        p.bullet Almost everything you need is prepackaged.
+        p.bullet Windows? OS X? Linux? It just works.
+        p.bullet Everyone uses the same VM configuration.
+
+      section.tool(data-bespoke-hash='vvv' data-bespoke-backdrop='tool-vagrant')
+        h2 VVV
+        h3 github.com/Varying-Vagrant-Vagrants
+
+      section
+        p.bullet Creates new local WordPress sites from configuration.
+        p.bullet Provides database and cache management tools.
+        p.bullet Provides debug and profiling tools.
+
+      section
+        p.bullet I provided you with a sample VVV setup.
+        pre.bullet
+          code.language-javascript.
+            $ cd ~/VVV
+            $ vagrant up
+
+      section(data-bespoke-backdrop='slide-please-wait')
+        h3 It takes a minute.
+
+      section
+        p VVV Dashboard
+        h3 http://vvv/
+
+      section(data-bespoke-backdrop='intro')
+        h1 Scaffolding
+
+      section(data-bespoke-hash='starter-themes')
+        h2 Starter Themes
+        hr
+        p.bullet
+        p.bullet Genesis Framework
+        p.bullet Underscores (underscores.me)
+        p.bullet Sage (roots.io)
+        p.bullet B3 (beebeebee.be)
+
+      section
+        p Find a Genesis-based starter theme in your VM:
+        br
+        pre ~/VVV/www/workshop.dev/wp-content/themes/genesis-starter
+
+      section.tool(data-bespoke-hash='wppb' data-bespoke-backdrop='tool-wppb')
+        h2 Plugin Boilerplate
+        h3 wppb.io
+
+      section
+        p Find a Boilerplate-based plugin in your VM:
+        br
+        pre ~/VVV/www/workshop.dev/wp-content/plugins/plugin-name
+
+      section.tool(data-bespoke-hash='yeoman' data-bespoke-backdrop='tool-yeoman')
+        h2 Yeoman
+        h3 yeoman.io
+
+      section
+        h2 Yeoman
+        hr
+        br
+        p Try it now.
+        br
+        pre $ yo wp-plugin-boilerplate
+
+      section
+        p.bullet Avoid reinventing the wheel.
+        br
+        p.bullet &ldquo;A 1000-hour headstart.&rdquo;
+        br
+        p.bullet Provides structure and best practices.
+
+      section(data-bespoke-backdrop='intro')
+        h1 Dependency Management
+
+      section.tool(data-bespoke-hash='composer' data-bespoke-backdrop='tool-composer')
+        h2 Composer
+        h3 getcomposer.org
+
+      section
+        h4 Need a PHP library?
+        pre $ composer require &lt;library&gt;
+
+      section
+        h4 Need a WordPress plugin?
+        pre $ composer require wpackagist-plugin/&lt;plugin&gt;
+
+      section.tool(data-bespoke-hash='npm' data-bespoke-backdrop='tool-npm')
+        h2 NPM
+        h3 npmjs.org
+
+      section
+        h4 Need a JavaScript module?
+        pre $ npm install &lt;module&gt;
+
+      section
+        p.bullet Don’t repeat yourself.
+        p.bullet Don’t manage 3rd party code.
+        p.bullet Just declare required components and versions.
+        p.bullet Manages dependencies and conflicts.
+
+      section
+        h3 Isn’t NPM a Node.js thing?
+        h3 How do I use these modules on the browser?
+
+      section.tool(data-bespoke-hash='browserify' data-bespoke-backdrop='tool-browserify')
+        h2 Browserify
+        h3 browserify.org
+
+      section
+        p Browserify lets you use NPM modules in the browser.
+
+      section
+        h4 Step 1
+        pre $ npm install uniq
+        br
+        h4 Step 2
+        pre
+          code.language-javascript.
+            var unique = require('uniq'),
+                data   = [1, 2, 2, 3, 3, 3, 4];
+
+            unique(data); // =&gt; [1, 2, 3, 4]
+
+      section(data-bespoke-backdrop='slide-wake-up')
+        p Designers &mdash; this one is for you.
+
+      section(data-bespoke-backdrop='intro')
+        h1 Asset Building
+
+      section.tool(data-bespoke-hash='sass' data-bespoke-backdrop='tool-sass')
+        h2 Sass
+        h3 sass-lang.com
+
+      section
+        p Sass is a better way to write CSS.
+
+      section
+        h2 CSS
+        pre
+          code.language-css.
+            .content h1,
+            .content h2,
+            .content h3,
+            .content p {
+              color: black;
+            }
+
+      section
+        h2 Sass/SCSS
+        pre
+          code.language-css.
+            $text-color: black;
+
+            .content {
+              h1, h2, h3, p {
+                color: $text-color;
+              }
+            }
+
+      section
+        h2 Optimization
+        hr
+        p.bullet
+        p.bullet Combines JS and CSS into single files.
+        p.bullet Automatically generates CSS for legacy browsers.
+        p.bullet Generates image sprites.
+        p.bullet Compresses sources and images.
+
+      section(data-bespoke-backdrop='intro')
+        h1 QA
+
+      section(data-bespoke-backdrop='slide-self-punch')
+        p Don’t be your own worst enemy.
+
+      section
+        p.bullet Maintenance is 80% of the cost of a large project.
+        p.bullet You should care that your code is easy to maintain.
+
+      section(data-bespoke-backdrop='slide-tangled-cables')
+        h2 Messy Code
+        hr
+        br
+        p Hard to read.
+        br
+        p Hard to understand.
+        br
+        p Hard to maintain.
+        br
+        p Dangerous.
+
+      section(data-bespoke-backdrop='slide-frustration')
+        p Messy code leads to developer frustration.
+
+      section(data-bespoke-backdrop='slide-hide-mess')
+        p Messy code can hide serious defects.
+
+      section(data-bespoke-backdrop='slide-waste')
+        p Messy code costs you real money.
+
+      section
+        h2 Linting
+        hr
+        p.bullet
+        p.bullet Ensures coding standards.
+        p.bullet Detects common bugs.
+        p.bullet Encourages best practices.
+
+      section
+        h2 In 6 months…
+        hr
+        p.bullet
+        p.bullet Will you remember how the project works?
+        p.bullet Will the new intern know?
+
+      section(data-bespoke-backdrop='slide-minor-fail')
+        p Less of this.
+
+      section(data-bespoke-backdrop='slide-epic-fail')
+        p <u>Definitely</u> less of this.
+
+      section(data-bespoke-backdrop='slide-epic-win')
+        p More of this.
+
+      section
+        h2 Unit Testing
+        hr
+        p.bullet
+        p.bullet Minimizes bugs.
+        p.bullet Prevents regressions.
+        p.bullet Encourages best practices.
+
+      section(data-bespoke-backdrop='slide-thats-a-lot')
+        h3 Okay, that’s a lot.
+
+      section(data-bespoke-backdrop='slide-overwhelmed')
+        h3 Do I have to build and test everything by hand?
+
+      section
+        p NO
+
+      section(data-bespoke-backdrop='intro')
+        h1 Task Automation
+
+      section.tool(data-bespoke-hash='gulp' data-bespoke-backdrop='tool-gulp')
+        h2 Gulp
+        h3 gulpjs.com
+
+      section
+        p Leave this one thing running...
+
+      section
+        pre $ gulp watch
+
+      section
+        p Gulp watches your files for changes.
+
+      section
+        p Then builds, optimizes and tests everything as needed.
+
+      section
+        p It will even reload the browser for you.
+
+      section
+        h2 By the way
+        hr
+        br
+        p Guess what’s behind the scenes of this presentation.
+
+      section.tool(data-bespoke-hash='browsersync' data-bespoke-backdrop='tool-browsersync')
+        h2 BrowserSync
+        h3 browsersync.io
+
+      section
+        p Synchronizes changes and interactions<br>across <u>all devices</u> connected to your dev site.
+
+      section
+        iframe(width='560' height='315' src='https://www.youtube.com/embed/hnWhKooKrqY' frameborder='0' allowfullscreen)
+
+      section(data-bespoke-backdrop='intro')
+        h1 Debug &amp; Profiling
+
+      section.tool(data-bespoke-hash='chrome-devtools' data-bespoke-backdrop='tool-chrome-devtools')
+        h2 Chrome DevTools
+        h3 google.com/chrome
+
+      section.tool(data-bespoke-hash='xdebug' data-bespoke-backdrop='tool-xdebug')
+        h2 Xdebug
+        h3 xdebug.org
+
+      section
+        h2 Xdebug
+        hr
+        br
+        p.bullet VVV comes with Xdebug out of the box.
+        p.bullet Let’s try it now.
+
+      section
+        h2 Turn Xdebug on
+        hr
+        br
+        pre $ vagrant ssh -c xdebug_on
+
+      section
+        h2 Xdebug Profiler
+        hr
+        p.bullet
+        p.bullet Append <code>?XDEBUG_PROFILE</code> to the site’s address.
+        p.bullet (e.g. <code>http://workshop.dev/?XDEBUG_PROFILE</code>)
+        p.bullet Now visit <code>http://vvv/webgrind/</code> to profile the request.
+
+      section.tool(data-bespoke-hash='debug-bar' data-bespoke-backdrop='tool-debug-bar')
+        h2 Debug Bar
+        h3 wordpress.org/plugins/debug-bar
+
+      section
+        h2 Debug Bar
+        hr
+        p.bullet
+        p.bullet Installed as a WordPress plugin.
+        p.bullet Extendable.
+
+      section.tool(data-bespoke-hash='p3-profiler' data-bespoke-backdrop='tool-p3')
+        h2 Plugin Performance Profiler
+        h3 wordpress.org/plugins/p3-profiler
+
+      section.tool(data-bespoke-hash='pagespeed' data-bespoke-backdrop='tool-pagespeed')
+        h2 PageSpeed
+        h3 developers.google.com/speed/pagespeed
+
+      section.tool(data-bespoke-hash='yslow' data-bespoke-backdrop='tool-yslow')
+        h2 YSlow
+        h3 yslow.org
+
+      section.tool(data-bespoke-hash='ab' data-bespoke-backdrop='tool-ab')
+        h2 ApacheBench
+        h3 httpd.apache.org
+
+      section(data-bespoke-backdrop='intro')
+        h1 Version Control
+
+      section.tool(data-bespoke-hash='git' data-bespoke-backdrop='tool-git')
+        h2 Git
+        h3 git-scm.com
+
+      section.tool(data-bespoke-hash='bitbucket' data-bespoke-backdrop='tool-bitbucket')
+        h2 Bitbucket
+        h3 bitbucket.com
+
+      section
+        h2 TODO: Git workflow
+
+      section
+        h2 Code Reviews
+
+      section
+        h2 Code Reviews
+        hr
+        p.bullet
+        p.bullet Preserve architectural integrity.
+        p.bullet Prevent a wide variety of bugs.
+        p.bullet Enforce best practices.
+        p.bullet JUST DO IT.
+
+      section
+        h2 Code Reviews
+        hr
+        p.bullet
+        p.bullet All code must be approved before it can go live.
+        p.bullet &ldquo;Pull Requests&rdquo; on Bitbucket.
+        p.bullet Code annotations on Bitbucket.
+
+      section
+        h2 TODO: Git + Code review workflow
+
+      section(data-bespoke-backdrop='intro')
+        h1 Continuous Integration
+
+      section.tool(data-bespoke-hash='codeship' data-bespoke-backdrop='tool-codeship')
+        h2 Codeship
+        h3 codeship.com
+
+      section
+        h2 TODO: Git + Codeship workflow
+
+      section(data-bespoke-hash='thank-you' data-bespoke-backdrop='thank-you')
+        h2 Thank you
+        hr
+        h3 luis.rodrigues@log.pt
+        h3 @goblindegook
+
+    script(src='build/build.js')

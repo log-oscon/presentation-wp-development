@@ -1,0 +1,11 @@
+{
+  "name": "presentation-wordpress-development",
+  "version": "0.0.0",
+  "dependencies": {
+    "prism": "*"
+  },
+  "devDependencies": {
+    "prism": "*",
+    "bespoke-theme-nebula": "~1.0.1"
+  }
+}
