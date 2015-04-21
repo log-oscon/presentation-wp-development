@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="27 423 413 221" width="413pt" height="221pt">
+    <defs>
+        <font-face font-family="Menlo" font-size="10" panose-1="2 11 6 9 3 8 4 2 2 4" units-per-em="1000" underline-position="-63.476562" underline-thickness="43.945312" slope="0" x-height="546.875" cap-height="729.0039" ascent="928.22266" descent="-235.83984" font-weight="500">
+            <font-face-src>
+                <font-face-name name="Menlo-Regular"/>
+            </font-face-src>
+        </font-face>
+    </defs>
+    <g id="git-workflow" stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
+        <g class="step-7">
+            <circle cx="420" cy="532.504" r="11.0000176" fill="#1d5aab"/>
+            <line x1="358.0896" y1="475.458" x2="411.9104" y2="525.05" stroke="#7e7e7e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+            <line x1="279.75" y1="532.504" x2="409" y2="532.504" stroke="#7e7e7e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g class="step-6">
+            <circle cx="350" cy="468.004" r="11.0000176" fill="#8b2b8c"/>
+            <line x1="277.36614" y1="525.6641" x2="341.38386" y2="474.8439" stroke="#7e7e7e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+            <line x1="279.74813" y1="466.70358" x2="339.00187" y2="467.80042" stroke="#7e7e7e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g class="step-5">
+            <circle cx="268.75" cy="532.504" r="11.0000176" fill="#1d5aab"/>
+            <line x1="195.91067" y1="593.90957" x2="260.33933" y2="539.59443" stroke="#7e7e7e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+            <line x1="128.500005" y1="532.504" x2="257.75" y2="532.504" stroke="#7e7e7e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g class="step-4">
+            <circle cx="187.5" cy="601" r="11.0000176" fill="#218041"/>
+            <line x1="125.36218" y1="540.19725" x2="179.63782" y2="593.30675" stroke="#7e7e7e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+            <text transform="translate(181.5 618)" fill="#218041">
+                <tspan font-family="Menlo" font-size="10" font-weight="500" fill="#218041" x=".37695312" y="9" textLength="72.246094">feature/best</tspan>
+            </text>
+        </g>
+        <g class="step-3">
+            <circle cx="268.75" cy="466.5" r="11.0000176" fill="#8b2b8c"/>
+            <line x1="198.5" y1="466.5" x2="257.75" y2="466.5" stroke="#7e7e7e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g class="step-2">
+            <circle cx="187.5" cy="466.5" r="11.0000176" fill="#8b2b8c"/>
+            <path d="M 125.3474 524.7957 C 143.44913 507.3107 161.55087 491.6933 179.6526 474.2083" stroke="#7e7e7e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+            <text transform="translate(181.5 438.5)" fill="#8b2b8c">
+                <tspan font-family="Menlo" font-size="10" font-weight="500" fill="#8b2b8c" x=".3461914" y="9" textLength="90.307617">feature/awesome</tspan>
+            </text>
+        </g>
+        <g class="step-1">
+            <circle cx="117.5" cy="532.504" r="11.0000176" fill="#1d5aab"/>
+            <line x1="58.500005" y1="532.504" x2="106.499995" y2="532.504" stroke="#7e7e7e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+            <circle cx="47.5" cy="532.504" r="11.0000176" fill="#1d5aab"/>
+            <text transform="translate(41.5 504.504)" fill="#1d5aab">
+                <tspan font-family="Menlo" font-size="10" font-weight="500" fill="#1d5aab" x=".43847656" y="9" textLength="36.123047">master</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

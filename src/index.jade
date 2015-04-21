@@ -17,7 +17,7 @@ html
         h3 April 2015
 
       section(data-bespoke-backdrop='slide-start')
-        h3 No time to lose.
+        h3 We all love a quick start.
 
       section(data-bespoke-backdrop='intro')
         h1 Virtualized Environment
@@ -43,13 +43,10 @@ html
 
       section
         p.bullet I provided you with a sample VVV setup.
-        pre.bullet
-          code.language-javascript.
-            $ cd ~/VVV
-            $ vagrant up
+        pre.bullet $ vagrant up
 
       section(data-bespoke-backdrop='slide-please-wait')
-        h3 It takes a minute.
+        h3 It takes a while to start the first time.
 
       section
         p VVV Dashboard
@@ -62,7 +59,7 @@ html
         h2 Starter Themes
         hr
         p.bullet
-        p.bullet Genesis Framework
+        p.bullet Genesis Framework (studiopress.com)
         p.bullet Underscores (underscores.me)
         p.bullet Sage (roots.io)
         p.bullet B3 (beebeebee.be)
@@ -84,14 +81,6 @@ html
       section.tool(data-bespoke-hash='yeoman' data-bespoke-backdrop='tool-yeoman')
         h2 Yeoman
         h3 yeoman.io
-
-      section
-        h2 Yeoman
-        hr
-        br
-        p Try it now.
-        br
-        pre $ yo wp-plugin-boilerplate
 
       section
         p.bullet Avoid reinventing the wheel.
@@ -130,8 +119,8 @@ html
         p.bullet Manages dependencies and conflicts.
 
       section
-        h3 Isn’t NPM a Node.js thing?
-        h3 How do I use these modules on the browser?
+        h3 Wait, isn’t NPM a Node.js thing?
+        h3 How do I use these modules?
 
       section.tool(data-bespoke-hash='browserify' data-bespoke-backdrop='tool-browserify')
         h2 Browserify
@@ -237,6 +226,11 @@ html
         p.bullet Encourages best practices.
 
       section
+        h2 WordPress Coding Standards
+        hr
+        h3 make.wordpress.org/core/handbook/coding-standards
+
+      section
         h2 In 6 months…
         hr
         p.bullet
@@ -288,21 +282,18 @@ html
       section
         p Then builds, optimizes and tests everything as needed.
 
-      section
-        p It will even reload the browser for you.
+      section(data-bespoke-backdrop='slide-lazy')
+        h3 Good news for the <s>lazy</s> efficient.
 
       section
-        h2 By the way
-        hr
-        br
-        p Guess what’s behind the scenes of this presentation.
+        p It will even reload the browser for you.
 
       section.tool(data-bespoke-hash='browsersync' data-bespoke-backdrop='tool-browsersync')
         h2 BrowserSync
         h3 browsersync.io
 
       section
-        p Synchronizes changes and interactions<br>across <u>all devices</u> connected to your dev site.
+        p Synchronizes changes and interactions<br>across <u>all devices</u> connected to your local site.
 
       section
         iframe(width='560' height='315' src='https://www.youtube.com/embed/hnWhKooKrqY' frameborder='0' allowfullscreen)
@@ -323,7 +314,7 @@ html
         hr
         br
         p.bullet VVV comes with Xdebug out of the box.
-        p.bullet Let’s try it now.
+        p.bullet Let’s try it out.
 
       section
         h2 Turn Xdebug on
@@ -363,8 +354,8 @@ html
         h3 yslow.org
 
       section.tool(data-bespoke-hash='ab' data-bespoke-backdrop='tool-ab')
-        h2 ApacheBench
-        h3 httpd.apache.org
+        h2 ab
+        h3 httpd.apache.org/docs/current/programs/ab.html
 
       section(data-bespoke-backdrop='intro')
         h1 Version Control
@@ -378,7 +369,78 @@ html
         h3 bitbucket.com
 
       section
-        h2 TODO: Git workflow
+        h2 Git workflow
+
+      section.git(data-bespoke-backdrop='git')
+        p We start with the <code>master</code> branch.
+
+      section.git(data-bespoke-backdrop='git')
+        div.diagram.step-1
+          include images/git-workflow.svg
+
+      section.git(data-bespoke-backdrop='git')
+        h3 Alice starts a new feature branch.
+        pre
+          code.language-css.
+            $ git branch feature/awesome
+
+      section.git(data-bespoke-backdrop='git')
+        div.diagram.step-2
+          include images/git-workflow.svg
+
+      section.git(data-bespoke-backdrop='git')
+        h3 Alice develops and commits to her branch.
+        pre
+          code.language-css.
+            $ git commit -m 'My feature is awesome.'
+
+      section.git(data-bespoke-backdrop='git')
+        div.diagram.step-3
+          include images/git-workflow.svg
+
+      section.git(data-bespoke-backdrop='git')
+        h3 Bob starts a new feature branch.
+        pre
+          code.language-css.
+            $ git branch feature/best
+
+      section.git(data-bespoke-backdrop='git')
+        div.diagram.step-4
+          include images/git-workflow.svg
+
+      section.git(data-bespoke-backdrop='git')
+        h3 Bob publishes his code.
+        pre
+          code.language-css.
+            $ git commit -m 'Mine is best.'
+            $ git checkout master
+            $ git merge feature/best
+
+      section.git(data-bespoke-backdrop='git')
+        div.diagram.step-5
+          include images/git-workflow.svg
+
+      section.git(data-bespoke-backdrop='git')
+        h3 Alice updates her branch with Bob’s code.
+        pre
+          code.language-css.
+            $ git merge master
+
+      section.git(data-bespoke-backdrop='git')
+        div.diagram.step-6
+          include images/git-workflow.svg
+
+      section.git(data-bespoke-backdrop='git')
+        h3 Alice publishes her code.
+        pre
+          code.language-css.
+            $ git commit -m 'I am done here.'
+            $ git checkout master
+            $ git merge feature/awesome
+
+      section.git(data-bespoke-backdrop='git')
+        div.diagram.step-7
+          include images/git-workflow.svg
 
       section
         h2 Code Reviews
@@ -392,6 +454,23 @@ html
         p.bullet Enforce best practices.
         p.bullet JUST DO IT.
 
+      section.git(data-bespoke-backdrop='git')
+        h2 Rewind
+        hr
+        br
+        div.diagram.step-4
+          include images/git-workflow.svg
+
+      section.git(data-bespoke-backdrop='git')
+        h3 Bob publishes his code.
+        pre.bullet
+          code.language-css.
+            $ git commit -m 'Mine is best.'
+            $ git checkout master
+            $ git merge feature/best
+        br
+        p.alert.bullet STOP RIGHT THERE
+
       section
         h2 Code Reviews
         hr
@@ -400,8 +479,17 @@ html
         p.bullet &ldquo;Pull Requests&rdquo; on Bitbucket.
         p.bullet Code annotations on Bitbucket.
 
-      section
-        h2 TODO: Git + Code review workflow
+      section.git(data-bespoke-backdrop='git')
+        h3 Bob merges nothing until Carol says so.
+
+      section.git(data-bespoke-backdrop='git')
+        h2 Let’s try that again
+        hr
+        br
+        h3.bullet Bob creates a pull request on Bitbucket.
+        h3.bullet Carol reviews and comments his code.
+        h3.bullet Bob implements suggested changes.
+        h3.bullet Carol approves the request, merging it.
 
       section(data-bespoke-backdrop='intro')
         h1 Continuous Integration
@@ -411,12 +499,40 @@ html
         h3 codeship.com
 
       section
-        h2 TODO: Git + Codeship workflow
+        h2 Codeship
+        hr
+        br
+        p.bullet Codeship monitors our Git repositories.
+        p.bullet Automatically builds the project and runs tests. (Remember Gulp?)
+        p.bullet Notifies developers of broken builds.
+
+      section.git(data-bespoke-backdrop='git')
+        h2 Codeship &#10084; Git
+        hr
+        br
+        h3.bullet Every commit is built and tested.
+        h3.bullet Code in <code>staging</code> gets pushed for testing.
+        h3.bullet Code in <code>master</code> gets pushed to production.
+        h3.bullet
+          u But only if it passes all tests.
+
+      section(data-bespoke-backdrop='slide-disaster')
+        h3 Disaster still struck!
+
+      section
+        p One-click rollbacks.
+
+      section(data-bespoke-backdrop='slide-phew')
+        h3 Phew.
 
       section(data-bespoke-hash='thank-you' data-bespoke-backdrop='thank-you')
         h2 Thank you
         hr
         h3 luis.rodrigues@log.pt
         h3 @goblindegook
+
+      section(data-bespoke-backdrop='thank-you')
+        h4 Find this presentation online
+        h3 log-oscon.github.io/presentation-wp-development
 
     script(src='build/build.js')
