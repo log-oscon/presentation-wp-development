@@ -42,8 +42,7 @@ html
         p.bullet Provides debug and profiling tools.
 
       section
-        p.bullet I provided you with a sample VVV setup.
-        pre.bullet $ vagrant up
+        pre $ vagrant up
 
       section(data-bespoke-backdrop='slide-please-wait')
         h3 It takes a while to start the first time.
@@ -64,19 +63,9 @@ html
         p.bullet Sage (roots.io)
         p.bullet B3 (beebeebee.be)
 
-      section
-        p Find a Genesis-based starter theme in your VM:
-        br
-        pre ~/VVV/www/workshop.dev/wp-content/themes/genesis-starter
-
       section.tool(data-bespoke-hash='wppb' data-bespoke-backdrop='tool-wppb')
         h2 Plugin Boilerplate
         h3 wppb.io
-
-      section
-        p Find a Boilerplate-based plugin in your VM:
-        br
-        pre ~/VVV/www/workshop.dev/wp-content/plugins/plugin-name
 
       section.tool(data-bespoke-hash='yeoman' data-bespoke-backdrop='tool-yeoman')
         h2 Yeoman
@@ -288,6 +277,7 @@ html
 
       section
         p It will even reload the browser for you.
+        p Hello!
 
       section.tool(data-bespoke-hash='browsersync' data-bespoke-backdrop='tool-browsersync')
         h2 BrowserSync
@@ -327,8 +317,8 @@ html
         h2 Xdebug Profiler
         hr
         p.bullet
-        p.bullet Append <code>?XDEBUG_PROFILE</code> to the site’s address.
-        p.bullet (e.g. <code>http://workshop.dev/?XDEBUG_PROFILE</code>)
+        p.bullet Append <code>?XDEBUG_PROFILE</code> to the local site’s address.
+        p.bullet (e.g. <code>http://local.wordpress.dev/?XDEBUG_PROFILE</code>)
         p.bullet Now visit <code>http://vvv/webgrind/</code> to profile the request.
 
       section.tool(data-bespoke-hash='debug-bar' data-bespoke-backdrop='tool-debug-bar')
