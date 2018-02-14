@@ -30,6 +30,7 @@ html
         p.bullet Almost everything you need is prepackaged.
         p.bullet Windows? OS X? Linux? It just works.
         p.bullet Everyone uses the same VM configuration.
+        p.bullet Each VM has its set of memory resources.
 
       section.tool(data-bespoke-hash='vvv' data-bespoke-backdrop='tool-vagrant')
         h2 VVV
@@ -47,8 +48,41 @@ html
         h3 It takes a while to start the first time.
 
       section
+        pre $ vagrant provision
+
+      section(data-bespoke-backdrop='slide-please-wait')
+        h3 The provision phase will take time, exponential to the number of projects living in your vagrant projects folder.
+
+      section
         p VVV Dashboard
         h3 http://vvv/
+
+      section(data-bespoke-backdrop='intro')
+        h1 Containerized Applications
+
+      section.tool(data-bespoke-hash='docker' data-bespoke-backdrop='tool-docker')
+        h2 Docker
+        h3 docker.com
+
+      section
+        p.bullet Very little setup.
+        p.bullet Everything you need is prepackaged.
+        p.bullet Windows? OS X? Linux? It just works.
+        p.bullet Everyone uses the same containers.
+        p.bullet Containers share the same memory resources.
+
+      section.tool(data-bespoke-hash='docker-compose' data-bespoke-backdrop='tool-docker')
+        h2 Docker Compose
+        h3 docs.docker.com/compose
+
+      section
+        p.bullet Define and Run a multi-container Docker application.
+
+      section
+        pre $ docker-compose up
+
+      section(data-bespoke-backdrop='slide-please-wait')
+        h3 It don't take much time to start the first time.
 
       section(data-bespoke-backdrop='intro')
         h1 Scaffolding
@@ -59,16 +93,14 @@ html
         p.bullet
         p.bullet Genesis Framework (studiopress.com)
         p.bullet Underscores (underscores.me)
-        p.bullet Sage (roots.io)
-        p.bullet B3 (beebeebee.be)
 
       section.tool(data-bespoke-hash='wppb' data-bespoke-backdrop='tool-wppb')
         h2 Plugin Boilerplate
         h3 wppb.io
 
       section.tool(data-bespoke-hash='yeoman' data-bespoke-backdrop='tool-yeoman')
-        h2 Yeoman
-        h3 yeoman.io
+        h2 Plugin Generator
+        h3 github.com/log-oscon/generator-log-wp-plugin
 
       section
         p.bullet Avoid reinventing the wheel.
@@ -114,20 +146,12 @@ html
         h2 Browserify
         h3 browserify.org
 
-      section
-        p Browserify lets you use NPM modules in the browser.
+      section.tool(data-bespoke-hash='webpack' data-bespoke-backdrop='tool-webpack')
+        h2 Webpack
+        h3 webpack.js.org
 
       section
-        h4 Step 1
-        pre $ npm install uniq
-        br
-        h4 Step 2
-        pre
-          code.language-javascript.
-            var unique = require('uniq')
-            var data   = [1, 2, 2, 3, 3, 3, 4]
-
-            unique(data) // =&gt; [1, 2, 3, 4]
+        p Browserify and Webpack lets you use NPM modules in the browser.
 
       section(data-bespoke-backdrop='slide-wake-up')
         p Designers &mdash; this one is for you.
@@ -206,9 +230,9 @@ html
         p.bullet Encourages best practices.
 
       section
-        h2 WordPress Coding Standards
+        h2 log Coding Standards
         hr
-        h3 make.wordpress.org/core/handbook/coding-standards
+        h3 log-oscon.github.io/Standards
 
       section
         h2 In 6 months…
@@ -227,12 +251,13 @@ html
         p More of this.
 
       section
-        h2 Unit Testing
+        h2 Unit & Acceptance Testing
         hr
         p.bullet
         p.bullet Minimizes bugs.
         p.bullet Prevents regressions.
         p.bullet Encourages best practices.
+        p.bullet Validates functional specifications.
 
       section(data-bespoke-backdrop='slide-thats-a-lot')
         h3 Okay, that’s a lot.
@@ -250,14 +275,15 @@ html
         h2 Gulp
         h3 gulpjs.com
 
-      section
-        p Leave this one thing running...
+      section.tool(data-bespoke-hash='webpack-hotreloading' data-bespoke-backdrop='tool-webpack')
+        h2 Webpack Hot Module Replacement
+        h3 webpack.js.org
 
       section
-        pre $ gulp watch
+        p Leave one of those things running...
 
       section
-        p Gulp watches your files for changes.
+        p They watch your files for changes.
 
       section
         p Then builds, optimizes and tests everything as needed.
@@ -303,10 +329,11 @@ html
         hr
         br
         p.bullet VVV comes with Xdebug out of the box.
+        p.bullet Our Docker image container comes with Xdebug as well.
         p.bullet Let’s try it out.
 
       section
-        h2 Turn Xdebug on
+        h2 Turn Xdebug on Vagrant
         hr
         br
         pre $ vagrant ssh -c xdebug_on
