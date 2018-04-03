@@ -11,7 +11,6 @@
       <section data-bespoke-backdrop="intro">
         <h3>WordPress @ log</h3>
         <h1>Development Workbench</h1>
-        <h3>April 2016</h3>
       </section>
       <section data-bespoke-backdrop="slide-start">
         <h3>We all love a quick start.</h3>
@@ -28,6 +27,7 @@
         <p class="bullet">Almost everything you need is prepackaged.</p>
         <p class="bullet">Windows? OS X? Linux? It just works.</p>
         <p class="bullet">Everyone uses the same VM configuration.</p>
+        <p class="bullet">Each VM has its set of memory resources.</p>
       </section>
       <section data-bespoke-hash="vvv" data-bespoke-backdrop="tool-vagrant" class="tool">
         <h2>VVV</h2>
@@ -45,8 +45,41 @@
         <h3>It takes a while to start the first time.</h3>
       </section>
       <section>
+        <pre>$ vagrant provision</pre>
+      </section>
+      <section data-bespoke-backdrop="slide-please-wait">
+        <h3>The provision phase will take time, exponential to the number of projects living in your vagrant projects folder.</h3>
+      </section>
+      <section>
         <p>VVV Dashboard</p>
         <h3>http://vvv/</h3>
+      </section>
+      <section data-bespoke-backdrop="intro">
+        <h1>Containerized Applications</h1>
+      </section>
+      <section data-bespoke-hash="docker" data-bespoke-backdrop="tool-docker" class="tool">
+        <h2>Docker</h2>
+        <h3>docker.com</h3>
+      </section>
+      <section>
+        <p class="bullet">Very little setup.</p>
+        <p class="bullet">Everything you need is prepackaged.</p>
+        <p class="bullet">Windows? OS X? Linux? It just works.</p>
+        <p class="bullet">Everyone uses the same containers.</p>
+        <p class="bullet">Containers share the same memory resources.</p>
+      </section>
+      <section data-bespoke-hash="docker-compose" data-bespoke-backdrop="tool-docker" class="tool">
+        <h2>Docker Compose</h2>
+        <h3>docs.docker.com/compose</h3>
+      </section>
+      <section>
+        <p class="bullet">Define and Run a multi-container Docker application.</p>
+      </section>
+      <section>
+        <pre>$ docker-compose up</pre>
+      </section>
+      <section data-bespoke-backdrop="slide-please-wait">
+        <h3>It don't take much time to start the first time.</h3>
       </section>
       <section data-bespoke-backdrop="intro">
         <h1>Scaffolding</h1>
@@ -57,16 +90,14 @@
         <p class="bullet"></p>
         <p class="bullet">Genesis Framework (studiopress.com)</p>
         <p class="bullet">Underscores (underscores.me)</p>
-        <p class="bullet">Sage (roots.io)</p>
-        <p class="bullet">B3 (beebeebee.be)</p>
       </section>
       <section data-bespoke-hash="wppb" data-bespoke-backdrop="tool-wppb" class="tool">
         <h2>Plugin Boilerplate</h2>
         <h3>wppb.io</h3>
       </section>
       <section data-bespoke-hash="yeoman" data-bespoke-backdrop="tool-yeoman" class="tool">
-        <h2>Yeoman</h2>
-        <h3>yeoman.io</h3>
+        <h2>Plugin Generator</h2>
+        <h3>github.com/log-oscon/generator-log-wp-plugin</h3>
       </section>
       <section>
         <p class="bullet">Avoid reinventing the wheel.</p><br>
@@ -110,18 +141,12 @@
         <h2>Browserify</h2>
         <h3>browserify.org</h3>
       </section>
-      <section>
-        <p>Browserify lets you use NPM modules in the browser.</p>
+      <section data-bespoke-hash="webpack" data-bespoke-backdrop="tool-webpack" class="tool">
+        <h2>Webpack</h2>
+        <h3>webpack.js.org</h3>
       </section>
       <section>
-        <h4>Step 1</h4>
-        <pre>$ npm install uniq</pre><br>
-        <h4>Step 2</h4>
-        <pre><code class="language-javascript">var unique = require('uniq')
-var data   = [1, 2, 2, 3, 3, 3, 4]
-
-unique(data) // =&gt; [1, 2, 3, 4]
-</code></pre>
+        <p>Browserify and Webpack lets you use NPM modules in the browser.</p>
       </section>
       <section data-bespoke-backdrop="slide-wake-up">
         <p>Designers &mdash; this one is for you.</p>
@@ -156,15 +181,6 @@ unique(data) // =&gt; [1, 2, 3, 4]
   }
 }
 </code></pre>
-      </section>
-      <section>
-        <h2>Optimization</h2>
-        <hr>
-        <p class="bullet"></p>
-        <p class="bullet">Combine JS and CSS into single files.</p>
-        <p class="bullet">Automatically generate CSS for legacy browsers.</p>
-        <p class="bullet">Generate image sprites.</p>
-        <p class="bullet">Compress sources and images.</p>
       </section>
       <section data-bespoke-backdrop="intro">
         <h1>QA</h1>
@@ -203,9 +219,9 @@ unique(data) // =&gt; [1, 2, 3, 4]
         <p class="bullet">Encourages best practices.</p>
       </section>
       <section>
-        <h2>WordPress Coding Standards</h2>
+        <h2>log Coding Standards</h2>
         <hr>
-        <h3>make.wordpress.org/core/handbook/coding-standards</h3>
+        <h3>log-oscon.github.io/Standards</h3>
       </section>
       <section>
         <h2>In 6 months…</h2>
@@ -224,12 +240,13 @@ unique(data) // =&gt; [1, 2, 3, 4]
         <p>More of this.</p>
       </section>
       <section>
-        <h2>Unit Testing</h2>
+        <h2>Unit & Acceptance Testing</h2>
         <hr>
         <p class="bullet"></p>
         <p class="bullet">Minimizes bugs.</p>
         <p class="bullet">Prevents regressions.</p>
         <p class="bullet">Encourages best practices.</p>
+        <p class="bullet">Validates functional specifications.</p>
       </section>
       <section data-bespoke-backdrop="slide-thats-a-lot">
         <h3>Okay, that’s a lot.</h3>
@@ -247,17 +264,27 @@ unique(data) // =&gt; [1, 2, 3, 4]
         <h2>Gulp</h2>
         <h3>gulpjs.com</h3>
       </section>
-      <section>
-        <p>Leave this one thing running...</p>
+      <section data-bespoke-hash="webpack-hotreloading" data-bespoke-backdrop="tool-webpack" class="tool">
+        <h2>Webpack Hot Module Replacement</h2>
+        <h3>webpack.js.org</h3>
       </section>
       <section>
-        <pre>$ gulp watch</pre>
+        <p>Leave one of those things running...</p>
       </section>
       <section>
-        <p>Gulp watches your files for changes.</p>
+        <p>They watch your files for changes.</p>
       </section>
       <section>
         <p>Then builds, optimizes and tests everything as needed.</p>
+      </section>
+      <section>
+        <h2>Optimization</h2>
+        <hr>
+        <p class="bullet"></p>
+        <p class="bullet">Combine JS and CSS into single files.</p>
+        <p class="bullet">Automatically generate CSS for legacy browsers.</p>
+        <p class="bullet">Generate image sprites.</p>
+        <p class="bullet">Compress sources and images.</p>
       </section>
       <section data-bespoke-backdrop="slide-lazy">
         <h3>Good news for the <s>lazy</s> efficient.</h3>
@@ -290,10 +317,11 @@ unique(data) // =&gt; [1, 2, 3, 4]
         <h2>Xdebug</h2>
         <hr><br>
         <p class="bullet">VVV comes with Xdebug out of the box.</p>
+        <p class="bullet">Our Docker image container comes with Xdebug as well.</p>
         <p class="bullet">Let’s try it out.</p>
       </section>
       <section>
-        <h2>Turn Xdebug on</h2>
+        <h2>Turn Xdebug on Vagrant</h2>
         <hr><br>
         <pre>$ vagrant ssh -c xdebug_on</pre>
       </section>
@@ -907,8 +935,8 @@ $ git merge feature/best</code></pre><br>
       <section data-bespoke-hash="thank-you" data-bespoke-backdrop="thank-you">
         <h2>Thank you</h2>
         <hr>
-        <h3>luis.rodrigues@log.pt</h3>
-        <h3>@goblindegook</h3>
+        <h3>log</h3>
+        <h3>@log_oscon</h3>
       </section>
       <section data-bespoke-backdrop="thank-you">
         <h4>Find this presentation online</h4>
